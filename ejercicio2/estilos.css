@@ -1,0 +1,87 @@
+html {
+    height:100%;
+    width:100%;
+}
+body{
+    background:#8ba987 url('fondo.jpg') no-repeat center center;
+    background-size:100% 100%;
+}
+
+.contenedor{
+
+	width: 600px;
+	border: solid 1px black;
+	padding: 20px;
+	display:block;
+	margin: 0px auto;
+	background-color: rgba(117, 135, 44, 0.8);
+	border-radius: 15px;
+	
+
+}
+
+.casilla{
+
+	padding: 10px;
+	width: 300px;
+ 	display: block;
+ 	margin: 0px auto;
+
+
+
+}
+
+.casilla label{
+	margin-bottom: 9px;
+	display: block;
+	font-size: white;
+	font: oblique bold 120% cursive;
+	color: white;
+
+}
+
+.casilla input{
+
+	background-color: rgba(0,0,0,0);
+	border-width: 0;
+	border-bottom: solid 2px white;
+	padding: 5px;
+	color: white;
+	font-size: 1.3em;
+
+	
+}
+
+.casilla input:focus{
+
+	outline: 0px;
+
+}
+
+#suma, #resta, #multiplicacion, #division {
+
+	border: 1px solid #DBE1EB;
+	font-size: 18px;
+	font-family: Arial, Verdana;
+	padding-left: 7px;
+	padding-right: 7px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-o-border-radius: 4px;
+	background: #4972B5;
+	color: #FFFFFF;
+	display: block;
+	margin: 10px auto;
+	width: 300px;
+  }
+
+  #suma:hover, #resta:hover, #multiplicacion:hover, #division:hover{
+  background: #365D9D;
+  color: #FFFFFF;
+  border-color: #FBFFAD;
+  }
+  
+ 

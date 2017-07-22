@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Hora fecha del sistema</title>
+	<script>
+			
+			function hora_fecha(){
+
+				var fecha = new Date()
+
+				alert("FECHA: "+ fecha.getDate() + "/" + fecha.getMonth() + "/" + fecha.getFullYear()  + " HORA: " + fecha.getHours()  + ":" + fecha.getMinutes()  + ":" + fecha.getSeconds());
+
+
+
+
+			}
+
+	</script>
+
+
+</head>
+<body>
+	
+	<button value="Hora y fecha" id="botonHora" onclick="hora_fecha()">Hora y fecha</button>
+
+</body>
+</html>

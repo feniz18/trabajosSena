@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Clase 1</title>
+
+	<script>
+
+		function agrega(){
+
+			if (document.getElementById(3) == null) {
+
+				var tabla = new Array();
+				var nombre = document.getElementById('nombre');
+				var apellido = document.getElementById('apellido');
+
+				tabla[0] = nombre.value;
+				tabla[1] = apellido.value;
+
+				document.getElementById("tabla").innerHTML ="<tr id='encabezado'><td id='1'>Nombres</td><td id='2'>Apellidos</td></tr><tr id='encabezado'><td id='3'>"+ tabla[0]+"</td><td id='4'>"+ tabla[1] +"</td></tr>";
+
+			}else{
+
+				var tabla = new Array();
+
+				var i = 3;
+
+				while(document.getElementById(i)==null){
+
+
+					document.getElementById("tabla").innerHTML = "<tr id='encabezado'><td id='1'>Nombres</td><td id='2'>Apellidos</td></tr><tr id='encabezado'><td id='3'>"+ tabla[0]+"</td><td id='4'>"+ tabla[1] +"</td></tr>";
+
+				}
+
+
+			}
+
+
+			/*var tabla = document.getElementById("4"); alert(tabla.innerHTML);*/
+
+			
+
+		}
+
+
+	</script>
+</head>
+<body>
+
+	<div>
+		<label for="nombre">Nombres:</label>
+		<input type="text" id="nombre" />
+	</div>
+	<div>
+		<label for="apellido">Apellidos</label>
+		<input type="text" id="apellido" />
+	</div>
+	<div id="botones">
+		<button id="agrega" onclick="agrega()">Agregar</button>
+		<button id="muestra">Mostrar contenido</button>
+		<button id="limpia">Limipiar la lista</button>
+
+	</div>
+
+	<div>
+		
+		<table id="tabla">
+
+			<tr id="encabezado">
+
+				<td id="1">Nombres</td>
+
+				<td id="2">Apellidos</td>
+
+			</tr>
+			
+			
+		</table>
+		
+
+	</div>
+	
+</body>
+</html>
