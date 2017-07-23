@@ -17,7 +17,7 @@
 				tabla[0] = nombre.value;
 				tabla[1] = apellido.value;
 
-				document.getElementById("tabla").innerHTML ="<tr id='encabezado'><td id='1'>Nombres</td><td id='2'>Apellidos</td></tr><tr id='encabezado'><td id='3'>"+ tabla[0]+"</td><td id='4'>"+ tabla[1] +"</td></tr>";
+				document.getElementById("tabla").innerHTML ="<tr id='encabezado'><td id='1'>Nombres</td><td id='2'>Apellidos</td></tr><tr id='3'><td id='3'>"+ tabla[0]+"</td><td id='4'>"+ tabla[1] +"</td></tr>";
 
 			}else{
 
@@ -28,8 +28,8 @@
 				while(document.getElementById(i)==null){
 
 
-					document.getElementById("tabla").innerHTML = "<tr id='encabezado'><td id='1'>Nombres</td><td id='2'>Apellidos</td></tr><tr id='encabezado'><td id='3'>"+ tabla[0]+"</td><td id='4'>"+ tabla[1] +"</td></tr>";
-
+					document.getElementById("tabla").innerHTML = document.getElementById("tabla").innerHTML + "<tr id='"+  +"'><td id='3'>"+ tabla[i-1]+"</td><td id='4'>"+ tabla[i] +"</td></tr>";
+					i++;
 				}
 
 
@@ -66,7 +66,7 @@
 		
 		<table id="tabla">
 
-			<tr id="encabezado">
+			<tr id="2">
 
 				<td id="1">Nombres</td>
 
