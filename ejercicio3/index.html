@@ -6,41 +6,66 @@
 
 	<script>
 
+		var datos;
+		var tabla = new Array();
+	
+
 		function agrega(){
 
-			if (document.getElementById(3) == null) {
 
-				var tabla = new Array();
+
+
 				var nombre = document.getElementById('nombre');
 				var apellido = document.getElementById('apellido');
 
-				tabla[0] = nombre.value;
-				tabla[1] = apellido.value;
+				if (nombre.value=="" || apellido.value==""){
 
-				document.getElementById("tabla").innerHTML ="<tr id='encabezado'><td id='1'>Nombres</td><td id='2'>Apellidos</td></tr><tr id='3'><td id='3'>"+ tabla[0]+"</td><td id='4'>"+ tabla[1] +"</td></tr>";
-
-			}else{
-
-				var tabla = new Array();
-
-				var i = 3;
-
-				while(document.getElementById(i)==null){
+					alert("Por favor digite su nombre o apellido");
 
 
-					document.getElementById("tabla").innerHTML = document.getElementById("tabla").innerHTML + "<tr id='"+  +"'><td id='3'>"+ tabla[i-1]+"</td><td id='4'>"+ tabla[i] +"</td></tr>";
-					i++;
+				}else{
+
+
+					tabla[tabla.length] = nombre.value;
+					tabla[tabla.length] = apellido.value;
+
 				}
+
+		}
+
+		function visor(){
+
+
+			document.getElementById("tabla").innerHTML = "<tr id='fila'><td id='1'>Nombres</td><td id='2'>Apellidos</td></tr>";
+
+			for (var i = 0; i != tabla.length; i+=2) {
+
+
+
+				document.getElementById("tabla").innerHTML = document.getElementById("tabla").innerHTML + "<tr id='fila'><td id='filas'>"+ tabla[i]+"</td><td id='filas'>"+ tabla[i+1] +"</td></tr>";
+					
 
 
 			}
 
-
-			/*var tabla = document.getElementById("4"); alert(tabla.innerHTML);*/
-
 			
 
 		}
+
+		function limpiar(){
+
+			tabla.length = 0;
+			document.getElementById("tabla").innerHTML = "<tr id='fila'><td id='1'>Nombres</td><td id='2'>Apellidos</td></tr>";
+
+
+
+
+
+
+		}		
+
+			
+
 
 
 	</script>
@@ -57,8 +82,8 @@
 	</div>
 	<div id="botones">
 		<button id="agrega" onclick="agrega()">Agregar</button>
-		<button id="muestra">Mostrar contenido</button>
-		<button id="limpia">Limipiar la lista</button>
+		<button id="muestra" onclick="visor()">Mostrar contenido</button>
+		<button id="limpia" onclick="limpiar()">Limipiar la lista</button>
 
 	</div>
 
@@ -66,7 +91,7 @@
 		
 		<table id="tabla">
 
-			<tr id="2">
+			<tr id="fila">
 
 				<td id="1">Nombres</td>
 
