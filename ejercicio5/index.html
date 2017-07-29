@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Clase 1</title>
+
+	<script>
+
+		var datos;
+		var tabla = new Array();
+	
+
+		function resultado(){
+
+
+
+
+				var nombre = document.getElementById('nombre');
+				var apellido = document.getElementById('apellido');
+				var direccion = document.getElementById('direccion');
+				var telefono = document.getElementById('telefono');
+
+				var url = "resultado.html";
+				location.href = url + "?nombre=" + nombre.value + "&apellido=" + apellido.value + "&direccion=" + direccion.value +"&telefono=" + telefono.value;
+
+
+		}
+
+			
+
+
+
+	</script>
+</head>
+<body>
+
+	<div>
+		<label for="nombre">Nombres:</label>
+		<input type="text" id="nombre" />
+	</div>
+	<div>
+		<label for="apellido">Apellidos:</label>
+		<input type="text" id="apellido" />
+	</div>
+
+	<div>
+		<label for="direccion">Direccion:</label>
+		<input type="text" id="direccion" />
+	</div>
+
+	<div>
+		<label for="telefono">Telefono:</label>
+		<input type="text" id="telefono" />
+	</div>
+	<div id="botones">
+		<button id="enviar" onclick="resultado()">Enviar</button>
+		
+
+	</div>
+
+	
+	
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>
+	Resultado
+	</title>
+
+
+	<script>
+		
+		function recibeVariable(variable) {
+			var query = window.location.search.substring(1);
+			var vars = query.split("&");
+
+			for (var i=0;i<vars.length;i++) {
+
+				var pair = vars[i].split("=");
+
+					if (pair[0] == variable) {
+								return pair[1];
+					}
+  			} 
+		}
+
+
+
+	</script>
+
+
+</head>
+<body>
+	<script>	
+		var nombre = recibeVariable("nombre");
+		var apellido = recibeVariable("apellido");
+		var telefono = recibeVariable("telefono");
+		var direccion = recibeVariable("direccion");
+
+		var nombre1 = nombre.replace(/%20/g," ")
+		var apellido1 = apellido.replace(/%20/g," ")
+		var direccion1 = direccion.replace(/%20/g," ")
+		var telefono1 = telefono.replace(/%20/g," ")
+		
+		document.write("<h1>Resultados de formulario</h1>");
+		document.write("<h2>Su nombre es: "+ nombre1 + "</h2>");
+		document.write("<h2>Su apellido es: " + apellido1 + "</h2>");	
+		document.write("<h2>Su telefono es: " + telefono1 + "</h2>");	
+		document.write("<h2>Su direccion es: " + direccion1 + "</h2>");
+
+	</script>
+</body>
+</html>
