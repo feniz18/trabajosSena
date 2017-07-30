@@ -1,21 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
+
+
 <head>
 	<meta charset="UTF-8">
 	<title>Paises del mundo</title>
-	
+
+	<script src="js/combos.js" type="text/javascript" charset="utf-8"></script>	
 	<link rel="stylesheet" type="text/css" href="css/estilosPaises.css"/>
 </head>
 <body>
 
 	<header id="cabecera">
-			<ul class="nav">
+			<ul class="nav" id="nav">
 				<li>
 				<a>Paises</a>
 					<ul>
-						<li><a>Colombia</a></li>
-						<li><a>Francia</a></li>
-						<li><a>Ecuador</a></li>
+						<li><a id="colombia">Colombia</a></li>
+						<li><a id="venezuela">Venezuela</a></li>
+						<li><a id="chile">Chile</a></li>
 					</ul>
 				</li>
 			</ul>
@@ -23,21 +27,25 @@
 
 
 <div id="combos">
-	<select id="ciudad" onchange="">
 
-	   <option value="1">Bogota</option> 
-	   <option value="2">Armenia</option> 
-	   <option value="3">bolivia</option>
+<!--	<select id="ciudad" onchange="colombia()">
+		
+		<option>Ciudad</option> 
+	   	<option>Bogota</option> 
+	   	<option>Armenia</option> 
+	   	<option>Bolivar</option>
 	   
 	</select>
 
-	<select id="departamento">
+	<select id="barrio">
 
-	   <option value="1">Seleccione ciudad</option> 
+	   <option>Seleccione ciudad</option> 
 
 	   
-	</select>
+	</select>-->
 
-</div>	
+</div>
+
+<script src="js/paises.js" type="text/javascript" charset="utf-8" async defer></script>	
 </body>
 </html>
