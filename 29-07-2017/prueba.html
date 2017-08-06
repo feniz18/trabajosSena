@@ -8,18 +8,20 @@
 
 	<script>
 		
-$("boton").on("click",function(){
 
 
 
-					alert("se clickeo");
+					
 
 		$("document").ready(function(){
 
 
+			$("#cuerpo").on("click","#boton",function(){
 
 			
+				alert("se clickeo");
 
+				$("#cuerpo").html('<button id="boton">boton2</button>');
 
 
 			});
@@ -32,13 +34,13 @@ $("boton").on("click",function(){
 
 
 
-		})
+		});
 
 
 	</script>
 
 </head>
-<body>
+<body id="cuerpo">
 
 <button id="boton">boton</button>
 

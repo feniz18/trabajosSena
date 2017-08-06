@@ -6,7 +6,7 @@ $(document).ready(function(){
 var pulso = false;
 
 
-	$("#boton").on('click', function(){
+	$("#combos").on('click',"#boton", function(){
 
 			if (pulso == true){
 
@@ -361,14 +361,11 @@ var pulso = false;
 
 			}
 
-		}
-
-
-		);
+		});
 
 
 
-		$("#limpiar").click(function(){
+		$("#combos").on("click","#limpiar",function(){
 
 
 
