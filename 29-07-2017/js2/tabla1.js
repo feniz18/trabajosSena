@@ -2,6 +2,8 @@
 
 $(document).ready(function(){
 
+$("#e1").select2();
+$("#e1").on("change",function(){alert($("#e1").value)});
 	
 var pulso = false;
 
