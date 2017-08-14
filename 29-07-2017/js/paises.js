@@ -34,7 +34,7 @@ function chileClick (){
 pais = document.getElementById('combos');
 
 
-	pais.innerHTML = '<select id="e1" id="ciudad" onchange="chile()"><option>Ciudad</option><option>colonia</option><option>republica presidencial</option><option>petorca</option></select><select id="barrio"><option>Seleccione ciudad</option></select>'
+	pais.innerHTML = '<select id="ciudad" onchange="chile()"><option>Ciudad</option><option>colonia</option><option>republica presidencial</option><option>petorca</option></select><select id="barrio"><option>Seleccione ciudad</option></select>'
 	 $(document).ready(function() { $("#ciudad").select2(); });
 	 $(document).ready(function() { $("#barrio").select2(); });
 

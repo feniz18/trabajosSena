@@ -1,32 +1,101 @@
 $("document").ready(function(){
 
-
-$("#pais").on("change",paises);
+$("#scombos").click(paises);
 
 function paises(){
 
 	var pais = new Array();
+	var colombia = new Array();
+	var brazil = new Array();
+	var puertorico = new Array();
 
 
 
-		pais [0,0] = "Colombia";
-		pais [1,0] = "Brazil";
-		pais [2,0] = "Puerto rico";
+		pais[0] = "Colombia";
+		pais[1] = "Brazil";
+		pais[2] = "Puerto rico";
 
-		pais[0,1] = "Bogota";
-		pais[0,2] = "Manizales";
-		pais[0,3] = "cucuta";
+		colombia[0] = "Bogota";
+		colombia[1] = "Manizales";
+		colombia[2] = "cucuta";
 
-		pais[1,1] = "Aranales";
-		pais[1,2] = "La nueva povincia";
-		pais[1,3] = "Nueva Granada";
+		brazil[0] = "Aranales";
+		brazil[1] = "La nueva povincia";
+		brazil[2] = "Nueva Granada";
 
-		pais[2,1] = "Puerto sur";
-		pais[2,2] ="Puerto norte";
-		pais[2,3] ="puerto occidente";
+		puertorico[0] = "Puerto sur";
+		puertorico[1] = "Puerto norte";
+		puertorico[2] = "puerto occidente";
 
 
-		alert("correcto");
+		$("#busqueda").attr('class', '');
+
+		/*for (var i = .length - 1; i >= 0; i--) {
+			[i]
+		}*/
+
+
+		for (var i = pais.length - 1; i >= 0; i--) {
+
+			$("#busqueda").html($("#busqueda").html() + "<option>" + pais[i] + "</option>");
+		}
+
+		$(document).ready(function(){
+
+			$("#busqueda").change(function(){
+
+				$("#busqueda1").attr('class', '');
+
+				$("#busqueda1").html("");
+
+				if ($("#busqueda").val() == 'Colombia'){
+
+					for (var i = colombia.length - 1; i >= 0; i--) {
+
+
+
+						$("#busqueda1").html($("#busqueda1").html() + "<option>" + colombia[i] + "</option>");
+
+
+					}
+
+
+				}else if ($("#busqueda").val() == 'Brazil'){
+
+					for (var i = brazil.length - 1; i >= 0; i--) {
+
+
+
+						$("#busqueda1").html($("#busqueda1").html() + "<option>" + brazil[i] + "</option>");
+
+
+					}
+
+
+				}else if ($("#busqueda").val() == 'Puerto rico'){
+
+					for (var i = puertorico.length - 1; i >= 0; i--) {
+
+
+
+						$("#busqueda1").html($("#busqueda1").html() + "<option>" + puertorico[i] + "</option>");
+
+
+					}
+
+
+				}
+
+				$(document).ready(function() { $("#busqueda1").select2(); });
+
+			});
+
+
+
+		});
+
+$(document).ready(function() { $("#busqueda").select2(); });
+
 }
 
 
