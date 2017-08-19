@@ -4,12 +4,15 @@ $("#scombos").click(paises);
 
 function paises(){
 
+
+
 	var pais = new Array();
 	var colombia = new Array();
 	var brazil = new Array();
 	var puertorico = new Array();
 
-
+	$("document").ready(function(){$("#combos").html(" ");});
+	$("document").ready(function(){$("#oculto").attr("class","container center-block")});
 
 		pais[0] = "Colombia";
 		pais[1] = "Brazil";
@@ -28,11 +31,7 @@ function paises(){
 		puertorico[2] = "puerto occidente";
 
 
-		$("#busqueda").attr('class', '');
-
-		/*for (var i = .length - 1; i >= 0; i--) {
-			[i]
-		}*/
+		$("#busqueda").attr('class', 'text-center');
 
 
 		for (var i = pais.length - 1; i >= 0; i--) {
@@ -44,9 +43,11 @@ function paises(){
 
 			$("#busqueda").change(function(){
 
+
 				$("#busqueda1").attr('class', '');
 
 				$("#busqueda1").html("");
+
 
 				if ($("#busqueda").val() == 'Colombia'){
 

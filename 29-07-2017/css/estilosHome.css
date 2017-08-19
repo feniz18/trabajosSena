@@ -113,3 +113,15 @@ h1{
 
 
 }
+
+.container{
+
+	float: none;
+
+}
+.centrar{
+
+
+	margin:0px auto;
+
+}
