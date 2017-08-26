@@ -1,0 +1,6 @@
+C:\Users\Administrador.DESKTOP-L0GLE2A\Desktop\console\lista\lista\bin\Debug\lista.exe.config
+C:\Users\Administrador.DESKTOP-L0GLE2A\Desktop\console\lista\lista\bin\Debug\lista.exe
+C:\Users\Administrador.DESKTOP-L0GLE2A\Desktop\console\lista\lista\bin\Debug\lista.pdb
+C:\Users\Administrador.DESKTOP-L0GLE2A\Desktop\console\lista\lista\obj\Debug\lista.csprojResolveAssemblyReference.cache
+C:\Users\Administrador.DESKTOP-L0GLE2A\Desktop\console\lista\lista\obj\Debug\lista.exe
+C:\Users\Administrador.DESKTOP-L0GLE2A\Desktop\console\lista\lista\obj\Debug\lista.pdb
